@@ -127,7 +127,16 @@ or to log to the console:
 ```.\inav-configurator.exe --enable-logging --log-file=inav-log.txt```
 
 
+## Web version
 
+The configurator can also run in Chrome or Edge on desktop, using Web Serial and WebUSB.
+
+```
+yarn dev:web      # run locally
+yarn build:web    # static site in dist-web/, host it on any HTTPS server
+```
+
+Click **+ Port** to allow access to a serial port, or **+ DFU** for a board in DFU mode. TCP, UDP and SITL are not available in the browser. `web/electronAPI.js` replaces the Electron bridge.
 
 ## Different map providers
 

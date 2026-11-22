@@ -11,6 +11,7 @@ inav-configurator.iml
 /.project
 /cache/
 /dist/
+/dist-web/
 /apps/
 /build/
 *~

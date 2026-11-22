@@ -93,9 +93,9 @@ $(function() {
         }
 
         const version = window.electronAPI.appGetVersion();
-        // alternative - window.navigator.appVersion.match(/Chrome\/([0-9.]*)/)[1];
+        const engine = navigator.userAgent.match(/(Electron|Chrome)\/([\d\.]+\d+)/) || ['', 'Browser', '?'];
         GUI.log(i18n.getMessage('getRunningOS') + GUI.operating_system + '</strong>, ' +
-            'Electron: <strong>' + navigator.userAgent.match(/Electron\/([\d\.]+\d+)/)[1] + '</strong>, ' +
+            engine[1] + ': <strong>' + engine[2] + '</strong>, ' +
             i18n.getMessage('getConfiguratorVersion') + version + '</strong>');
 
         $('#status-bar .version').text(version);
